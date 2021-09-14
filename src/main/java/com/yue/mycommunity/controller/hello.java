@@ -10,4 +10,7 @@ public class hello {
         model.addAttribute("name", name);
         return "hello";
     }
+    public void hello1(){
+
+    }
 }
