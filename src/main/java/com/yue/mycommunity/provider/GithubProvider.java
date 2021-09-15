@@ -5,7 +5,6 @@ import com.yue.mycommunity.dto.AccessTokenDTO;
 import com.yue.mycommunity.dto.GithubUser;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 @Component
 public class GithubProvider {
