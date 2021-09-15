@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yue.mycommunity.dao.UserMapper">
+    <insert id="addUser" parameterType="User">
+        insert into mybatis.user (id,name,pwd)
+        values(#{id},#{name},#{pwd});
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from mybatis.user where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="User">
+        update mybatis.user
+        set name=#{name},pwd=#{pwd}
+        where id=#{id};
+    </update>
+
+    <select id="queryUserById" resultType="User">
+        select * from mybatis.user where id=#{id}
+    </select>
+
+    <select id="quertAllUser" resultType="User">
+        select * from mybatis.user
+    </select>
+
+    <select id="queryUserByName" resultType="User">
+        select * from mybatis.user where name =#{username}
+    </select>
+</mapper>
